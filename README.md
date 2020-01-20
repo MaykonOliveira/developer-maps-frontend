@@ -1,39 +1,46 @@
-# developer-maps-frontend
- The frontend part of the application that will register the information of the developers
+<h1 align="center">
+    <img src="https://image.flaticon.com/icons/png/512/235/235861.png" height=100/>
+    <br>
+    Developer Maps
+</h1>
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/MaykonOliveira/developer-maps-frontend.svg">
 
-In the project directory, you can run:
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/MaykonOliveira/developer-maps-frontend.svg">
 
-### `yarn start`
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/MaykonOliveira/developer-maps-frontend.svg">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="https://github.com/MaykonOliveira/developer-maps-frontend/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MaykonOliveira/developer-maps-frontend.svg">
+  </a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <a href="https://github.com/MaykonOliveira/developer-maps-frontend/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/MaykonOliveira/developer-maps-frontend.svg">
+  </a>
 
-### `yarn test`
+  <img alt="GitHub" src="https://img.shields.io/github/license/MaykonOliveira/developer-maps-frontend.svg">
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `yarn build`
+- Node
+- Yarn
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Run the project
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To run this project you need execute the following steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository: `git clone git@github.com:MaykonOliveira/developer-maps-frontend.git`
 
-### `yarn eject`
+2. Enter in the directory of the project: `cd developer-maps-frontend`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Install the dependencies: `yarn`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Execute the project: `yarn start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+MIT
+
+See the [License](LICENSE.md) file.
