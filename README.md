@@ -1,4 +1,7 @@
 # developer-maps-frontend
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5751834dbe2049c28775c9459a1ad7ed)](https://app.codacy.com/manual/MaykonOliveira/developer-maps-frontend?utm_source=github.com&utm_medium=referral&utm_content=MaykonOliveira/developer-maps-frontend&utm_campaign=Badge_Grade_Dashboard)
+
  The frontend part of the application that will register the information of the developers
 
 ## Available Scripts
