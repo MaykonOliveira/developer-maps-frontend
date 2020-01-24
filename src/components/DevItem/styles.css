@@ -3,12 +3,15 @@ li.dev-item {
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
   border-radius: 2px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 li.dev-item header {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  flex: 1;
 }
 
 li.dev-item header img {
@@ -44,6 +47,7 @@ li.dev-item a {
   color: #8e4dff;
   font-size: 14px;
   text-decoration: none;
+  align-items: flex-end;
 }
 
 li.dev-item a:hover {

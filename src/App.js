@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
+import Spinner from "react-bootstrap/Spinner";
+
 import api from "./services/api";
 
 import DevForm from "./components/DevForm";
 import DevItem from "./components/DevItem";
 
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
 import "./App.css";
 
 function App() {
   const [devs, setDevs] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadDevs() {
+      setLoading(true);
       const response = await api.get("/devs");
       setDevs(response.data);
+      setLoading(false);
     }
 
     loadDevs();
@@ -33,11 +38,17 @@ function App() {
         <DevForm onSubmit={handleAddDev} />
       </aside>
       <main>
-        <ul>
-          {devs.map(dev => (
-            <DevItem key={dev._id} dev={dev} />
-          ))}
-        </ul>
+        {loading ? (
+          <Spinner className="spinner" animation="border" />
+        ) : (
+          <div className="main-content">
+            <ul>
+              {devs.map(dev => (
+                <DevItem key={dev._id} dev={dev} />
+              ))}
+            </ul>
+          </div>
+        )}
       </main>
     </div>
   );
