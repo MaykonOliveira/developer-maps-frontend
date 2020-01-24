@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 
 import "./styles.css";
+import github_logo from "../../assets/logo.png";
 
 export default function DevForm({ onSubmit }) {
   const [github_username, setGithubUsername] = useState("");
@@ -43,68 +44,74 @@ export default function DevForm({ onSubmit }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input-block">
-        <label htmlFor="github_username">Usuário do Github</label>
-        <input
-          name="github_username"
-          id="github_username"
-          required
-          value={github_username}
-          onChange={e => setGithubUsername(e.target.value)}
-        />
+    <>
+      <div id="cabacalho-form">
+        <img id="github-logo" src={github_logo} alt="Github logo"/>
+        <strong>Cadastrar</strong>
       </div>
-
-      <div className="input-block">
-        <label htmlFor="techs">Tecnologias</label>
-        <input
-          name="techs"
-          id="techs"
-          required
-          value={techs}
-          onChange={e => setTechs(e.target.value)}
-        />
-      </div>
-
-      <div className="input-group">
+      <form onSubmit={handleSubmit}>
         <div className="input-block">
-          <label htmlFor="latitude">Latitude</label>
+          <label htmlFor="github_username">Usuário do Github</label>
           <input
-            type="number"
-            name="latitude"
-            id="latitude"
+            name="github_username"
+            id="github_username"
             required
-            value={latitude}
-            onChange={e => setLatitude(e.target.value)}
+            value={github_username}
+            onChange={e => setGithubUsername(e.target.value)}
           />
         </div>
 
         <div className="input-block">
-          <label htmlFor="longitude">Longitude</label>
+          <label htmlFor="techs">Tecnologias</label>
           <input
-            type="number"
-            name="longitude"
-            id="longitude"
+            name="techs"
+            id="techs"
             required
-            value={longitude}
-            onChange={e => setLongitude(e.target.value)}
+            value={techs}
+            onChange={e => setTechs(e.target.value)}
           />
         </div>
-      </div>
 
-      <button type="submit">
-        {loading ? (
-          <Loader
-            type="ThreeDots"
-            color="white"
-            height={15}
-            width={30}
-            timeout={15000} //3 secs
-          />
-        ) : (
-          "Salvar"
-        )}
-      </button>
-    </form>
+        <div className="input-group">
+          <div className="input-block">
+            <label htmlFor="latitude">Latitude</label>
+            <input
+              type="number"
+              name="latitude"
+              id="latitude"
+              required
+              value={latitude}
+              onChange={e => setLatitude(e.target.value)}
+            />
+          </div>
+
+          <div className="input-block">
+            <label htmlFor="longitude">Longitude</label>
+            <input
+              type="number"
+              name="longitude"
+              id="longitude"
+              required
+              value={longitude}
+              onChange={e => setLongitude(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <button type="submit">
+          {loading ? (
+            <Loader
+              type="ThreeDots"
+              color="white"
+              height={15}
+              width={30}
+              timeout={15000} //3 secs
+            />
+          ) : (
+            "Salvar"
+          )}
+        </button>
+      </form>
+    </>
   );
 }

@@ -1,5 +1,21 @@
+#cabacalho-form {
+  text-align: center;
+}
+
+#github-logo {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
 aside form {
   margin-top: 30px;
+}
+
+aside strong {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: #333;
 }
 
 aside form .input-block {
@@ -46,3 +62,5 @@ aside form button[type="submit"] {
 aside form button[type="submit"]:hover {
   background: #5931ca;
 }
+
+
