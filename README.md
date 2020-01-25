@@ -22,12 +22,26 @@
   <img alt="GitHub" src="https://img.shields.io/github/license/MaykonOliveira/developer-maps-frontend.svg">
 </p>
 
-## Prerequisites
+# Screens
+
+## Add developer
+
+<img alt="Web" title="web" width="900" src="examples/gifs/create.gif">
+
+## Delete developer
+
+<img alt="Web" title="web" width="900" src="examples/gifs/delete.gif">
+
+## Github acess
+
+<img alt="Web" title="web" width="900" src="examples/gifs/github_access.gif">
+
+# Prerequisites
 
 - Node
 - Yarn
 
-## Run the project
+# Run the project
 
 To run this project you need execute the following steps:
 
@@ -38,6 +52,18 @@ To run this project you need execute the following steps:
 3. Install the dependencies: `yarn`
 
 4. Execute the project: `yarn start`
+
+# Observations
+
+* The backend used in the examples of this project is hosted on Heroku, so there may be lag in the gifs because of that.
+
+* To run the joint project on the backend you can find it here, you just need to create a configuration file (.env) in this project with a variable called `REACT_APP_API_URL` containing the URL for accessing the backend, usually` localhost: 3333`
+
+# What are the next steps?
+
+- [ ] Adjust the layout to use Material-UI to be more responsive.
+- [ ] Create a update function to the Dev cards.
+- [ ] Create a Login interface with access levels.
 
 ## License
 
