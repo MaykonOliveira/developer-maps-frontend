@@ -43,7 +43,7 @@ function App() {
       </aside>
       <main>
         {loading ? (
-          <div class="center-div">
+          <div className="center-div">
             <Spinner className="spinner" animation="border" />
           </div>
         ) : (
