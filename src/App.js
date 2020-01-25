@@ -31,7 +31,7 @@ function App() {
     setDevs([...devs, response.data]);
   }
 
-  async function handleDelete (id) {
+  async function handleDelete(id) {
     await api.delete(`/devs/${id}`);
     loadDevs();
   }
@@ -43,16 +43,18 @@ function App() {
       </aside>
       <main>
         {loading ? (
-          <Spinner className="spinner" animation="border" />
-        ) : (
-          <div className="main-content">
-            <ul>
-              {devs.map(dev => (
-                <DevItem key={dev._id} dev={dev} handleDelete={handleDelete}/>
-              ))}
-            </ul>
+          <div class="center-div">
+            <Spinner className="spinner" animation="border" />
           </div>
-        )}
+        ) : (
+            <div className="main-content">
+              <ul>
+                {devs.map(dev => (
+                  <DevItem key={dev._id} dev={dev} handleDelete={handleDelete} />
+                ))}
+              </ul>
+            </div>
+          )}
       </main>
     </div>
   );
