@@ -3,7 +3,7 @@ import DeleteButton from '../DeleteButton';
 
 import "./styles.css";
 
-export default function DevItem({ dev }) {
+export default function DevItem({ dev, handleDelete }) {
   return (
     <li className="dev-item">
       <header>
@@ -13,7 +13,7 @@ export default function DevItem({ dev }) {
           <span>{dev.techs.join(", ")}</span>
         </div>
         <div className="user-actions">
-          <DeleteButton />
+          <DeleteButton onClick={() => handleDelete(dev._id)}/>
         </div>
       </header>
       <p>{dev.bio}</p>

@@ -15,20 +15,25 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    async function loadDevs() {
-      setLoading(true);
-      const response = await api.get("/devs");
-      setDevs(response.data);
-      setLoading(false);
-    }
-
     loadDevs();
   }, []);
+
+  async function loadDevs() {
+    setLoading(true);
+    const response = await api.get("/devs");
+    setDevs(response.data);
+    setLoading(false);
+  }
 
   async function handleAddDev(data) {
     const response = await api.post("/devs", data);
 
     setDevs([...devs, response.data]);
+  }
+
+  async function handleDelete (id) {
+    await api.delete(`/devs/${id}`);
+    loadDevs();
   }
 
   return (
@@ -43,7 +48,7 @@ function App() {
           <div className="main-content">
             <ul>
               {devs.map(dev => (
-                <DevItem key={dev._id} dev={dev} />
+                <DevItem key={dev._id} dev={dev} handleDelete={handleDelete}/>
               ))}
             </ul>
           </div>
