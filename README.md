@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://image.flaticon.com/icons/png/512/235/235861.png" height=100/>
+    <img src="examples/images/maps.png" height=100/>
     <br>
     Developer Maps
 </h1>
