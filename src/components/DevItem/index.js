@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from '../DeleteButton';
 
 import "./styles.css";
 
@@ -10,6 +11,9 @@ export default function DevItem({ dev }) {
         <div className="user-info">
           <strong>{dev.name}</strong>
           <span>{dev.techs.join(", ")}</span>
+        </div>
+        <div className="user-actions">
+          <DeleteButton />
         </div>
       </header>
       <p>{dev.bio}</p>
